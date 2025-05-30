@@ -1,0 +1,18 @@
+ЧЕК-ЛИСТ ДЛЯ ТЕСТИРОВАНИЯ ФУНКЦИИ get_triangle_type
+
+Позитивные тесты:
+1. (3, 3, 3) → "equilateral"      — все стороны равны
+2. (5, 5, 3) → "isosceles"        — две стороны равны
+3. (3, 4, 5) → "nonequilateral"   — все стороны разные
+4. (2.5, 2.5, 3) → "isosceles"    — вещественные значения
+5. (1, 1, 1.5) → "isosceles"      — граничное условие (почти равносторонний)
+
+Негативные тесты:
+1. (0, 4, 5) → IncorrectTriangleSides  — нулевая сторона
+2. (-1, 4, 5) → IncorrectTriangleSides — отрицательная сторона
+3. (1, 2, 3) → IncorrectTriangleSides  — неравенство треугольника (1 + 2 = 3)
+4. (10, 1, 1) → IncorrectTriangleSides — одна сторона слишком длинная
+5. ('a', 2, 3) → TypeError или IncorrectTriangleSides — нечисловой ввод
+6. (None, 2, 3) → TypeError или IncorrectTriangleSides — некорректный тип
+
+
